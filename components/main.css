@@ -1,0 +1,26 @@
+/* typography & color */
+
+:root {
+	--f-adapt: "adapt-variable", sans-serif;
+	--f-area: "area-variable", sans-serif;
+	--c-black: #050505;
+	--c-white: #ffffff;
+	--c-grey-txt: #999999;
+	--c-grey: #cccccc;
+	--c-green: #6cffc1;
+	--c-blue: #0029ff;
+	--c-blue-light: #52b6ff;
+	--c-red: #fd4539;
+	--c-purple: #c241ff;
+	--c-purple-light: #f0b2ff;
+	--c-salmon: #ffb26a;
+}
+
+/*
+ADAPT WEIGHT & WIDTH INFO:
+font-variation-settings: "wght" 600, "wdth" 40;
+
+AREA WEIGHT & WIDTH INFO:
+font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400, "INKT" 0;
+*/
+
