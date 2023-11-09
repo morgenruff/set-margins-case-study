@@ -24,3 +24,24 @@ AREA WEIGHT & WIDTH INFO:
 font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400, "INKT" 0;
 */
 
+header {
+	font-family: var(--f-adapt);
+	font-variation-settings: "wght" 600, "wdth" 40;
+	font-size: 2rem;
+}
+
+.component {
+	
+}
+
+.component__screenshot img {
+	display: block;
+	border: 1px solid black;
+	margin: 1rem;
+}
+.component__text {
+	font-family: var(--f-area);
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400, "INKT" 0;
+	font-size: 0.9rem;
+	margin: 1rem;
+}
