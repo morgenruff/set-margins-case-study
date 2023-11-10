@@ -24,6 +24,12 @@ AREA WEIGHT & WIDTH INFO:
 font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
 */
 
+html {
+	margin: 0 auto;
+}
+
+/* component page globals */
+
 header {
 	font-family: var(--f-adapt);
 	font-variation-settings: "wght" 600, "wdth" 40;
@@ -31,6 +37,10 @@ header {
 	border: 2px solid var(--c-black);
 	margin: 1rem;
 	padding: 1rem;
+}
+
+header h1, p {
+	margin: 0;
 }
 
 .section-header {
@@ -43,12 +53,14 @@ header {
 	background-color: var(--c-black);
 }
 
-.component {
+/* typography defaults */
+
+.component__typography {
 	border: 2px solid var(--c-black);
 	margin: 1rem;
 }
 
-.component__header {
+.component__typography__header {
 	font-family: var(--f-area);
 	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400, "INKT" 0;
 	padding: 1rem;
@@ -57,23 +69,23 @@ header {
 	border-bottom: 2px solid var(--c-black);
 }
 
-.component__screenshot img {
+.component__typography__screenshot img {
 	display: block;
 	border: 1px solid var(--c-salmon);
 	margin: 1rem;
 	max-width: 90%;
 }
 
-.component__h1,
-.component__h2,
-.component__h3 {
+.component__typography__h1,
+.component__typography__h2,
+.component__typography__h3 {
 	padding: 0.5rem;
 	margin: 1rem;
 	width: max-content;
 	max-width: 90%;
 }
 
-.component__h1 {
+.component__typography__h1 {
 	font-family: var(--f-adapt);
 	font-variation-settings: "wght" 400, "wdth" 40;
 	font-size: 3.5rem;
@@ -81,21 +93,88 @@ header {
 	color: var(--c-white);
 }
 
-.component__h2 {
+.component__typography__h2 {
 	font-family: var(--f-area);
 	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
 	font-size: 2rem;
+	line-height: 2.5rem;
 }
 
-.component__h3 {
+.component__typography__h3 {
 	font-family: var(--f-area);
 	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
 	font-size: 0.95rem;
 }
 
-.component__body-text {
+.component__typography__body-text {
 	font-family: var(--f-area);
 	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
-	font-size: 0.9rem;
+	font-size: 1.1rem;
+	margin: 1rem;
+	line-height: 1.35rem;
+}
+
+/* navigation bars, headers */
+
+.component__navs {
+	border: 2px solid var(--c-black);
 	margin: 1rem;
 }
+
+.component__navs__header {
+	font-family: var(--f-area);
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400, "INKT" 0;
+	padding: 1rem;
+	margin: 0;
+	background-color: var(--c-red);
+	color: var(--c-white);
+	border-bottom: 2px solid var(--c-black);
+}
+
+.component__navs__screenshot img {
+	display: block;
+	border: 1px solid var(--c-red);
+	margin: 1rem;
+	max-width: 90%;
+}
+
+/* main header (appears on all pages) */
+
+.site__main-header {
+	background-color: var(--c-black);
+	margin: 1rem;
+	padding: 0.5rem 0.5rem 0 0.5rem;
+	max-width: 90%;
+}
+
+.site__main-header__list {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0 0.5rem;
+	list-style: none;
+}
+
+.site__main-header__list a {
+	text-decoration: none;
+	font-family: var(--f-adapt);
+	font-variation-settings: "wght" 400, "wdth" 40;
+	font-size: 2.3rem;
+	color: var(--c-grey-txt);
+}
+
+.site__main-header__item__wordmark a {
+	color: var(--c-white);
+}
+
+.site__main-header__item__wordmark a:hover {
+	color: var(--c-grey-txt);
+}
+
+.site__main-header__list a:hover {
+	color: var(--c-white);
+}
+
+/* sub-header (appears on homepage in one form, and as a sub-navigation on books, meetups, engage pages - not on single book or cart pages) */
+
