@@ -18,7 +18,7 @@
 
 /*
 ADAPT WEIGHT & WIDTH INFO:
-font-variation-settings: "wght" 600, "wdth" 40;
+font-variation-settings: "wght" 400, "wdth" 40;
 
 AREA WEIGHT & WIDTH INFO:
 font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400, "INKT" 0;
@@ -30,16 +30,66 @@ header {
 	font-size: 2rem;
 }
 
+.section-header {
+	font-family: var(--f-adapt);
+	font-variation-settings: "wght" 600, "wdth" 100;
+	font-size: 1.8rem;
+	padding: 1rem;
+	color: var(--c-white);
+	background-color: var(--c-black);
+}
+
 .component {
-	
+	border: 2px solid var(--c-black);
+	margin: 1rem;
+}
+
+.component__header {
+	font-family: var(--f-area);
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400, "INKT" 0;
+	padding: 1rem;
+	margin: 0;
+	background-color: var(--c-salmon);
+	border-bottom: 2px solid var(--c-black);
 }
 
 .component__screenshot img {
 	display: block;
-	border: 1px solid black;
+	border: 1px solid var(--c-salmon);
 	margin: 1rem;
+	max-width: 90%;
 }
-.component__text {
+
+.component__h1,
+.component__h2,
+.component__h3 {
+	padding: 0.5rem;
+	margin: 1rem;
+	width: max-content;
+	max-width: 90%;
+}
+
+.component__h1 {
+	font-family: var(--f-adapt);
+	font-variation-settings: "wght" 400, "wdth" 40;
+	font-size: 3.5rem;
+	background-color: var(--c-black);
+	color: var(--c-white);
+}
+
+.component__h2 {
+	font-family: var(--f-area);
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
+	font-size: 2.5rem;
+}
+
+.component__h3 {
+	font-family: var(--f-area);
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
+	font-size: 0.95rem;
+}
+
+.component__body-text {
 	font-family: var(--f-area);
 	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400, "INKT" 0;
 	font-size: 0.9rem;
