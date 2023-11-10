@@ -18,16 +18,19 @@
 
 /*
 ADAPT WEIGHT & WIDTH INFO:
-font-variation-settings: "wght" 400, "wdth" 40;
+font-variation-settings: "wght" 600, "wdth" 40;
 
 AREA WEIGHT & WIDTH INFO:
-font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400, "INKT" 0;
+font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
 */
 
 header {
 	font-family: var(--f-adapt);
 	font-variation-settings: "wght" 600, "wdth" 40;
 	font-size: 2rem;
+	border: 2px solid var(--c-black);
+	margin: 1rem;
+	padding: 1rem;
 }
 
 .section-header {
@@ -35,6 +38,7 @@ header {
 	font-variation-settings: "wght" 600, "wdth" 100;
 	font-size: 1.8rem;
 	padding: 1rem;
+	margin: 1rem;
 	color: var(--c-white);
 	background-color: var(--c-black);
 }
@@ -80,7 +84,7 @@ header {
 .component__h2 {
 	font-family: var(--f-area);
 	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
-	font-size: 2.5rem;
+	font-size: 2rem;
 }
 
 .component__h3 {
@@ -91,7 +95,7 @@ header {
 
 .component__body-text {
 	font-family: var(--f-area);
-	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400, "INKT" 0;
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
 	font-size: 0.9rem;
 	margin: 1rem;
 }
