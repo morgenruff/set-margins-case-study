@@ -178,3 +178,34 @@ header h1, p {
 
 /* sub-header (appears on homepage in one form, and as a sub-navigation on books, meetups, engage pages - not on single book or cart pages) */
 
+.site__sub-header__homepage {
+	
+}
+
+.site__sub-header__homepage__list {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	padding: 0;
+	margin: 1rem;
+}
+
+.site__sub-header__homepage__list__item a {
+	text-decoration: none;
+	color: var(--c-black);
+	font-family: var(--f-area);
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
+	font-size: 0.7rem;
+	padding: 1rem;
+}
+
+.site__sub-header__homepage__list__item--blue {
+	background-color: var(--c-blue-light);
+	
+}
+
+.site__sub-header__divider {
+	margin: 0 0.2rem;
+	height: 0.7rem;
+}
+
