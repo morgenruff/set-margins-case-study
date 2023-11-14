@@ -375,10 +375,10 @@ header h1, p {
 .site__site-footer__nav {
 	margin-top: 2.5rem;
 	display: grid;
-	grid-template-columns: max-content repeat(3, 1fr) repeat(2, max-content) 1fr repeat(3, max-content);
+	grid-template-columns: 3fr 1fr 3fr;
 	grid-template-rows: 1.5rem;
 	grid-template-areas: 
-		"copyright blank1 blank2 blank3 instagram facebook blank4 contact privacy terms";
+		"copyright ig-fb legal";
 	gap: 0.5rem;
 	> * {
 		color: var(--c-white);
@@ -387,30 +387,30 @@ header h1, p {
 		font-size: 0.7rem;
 		align-self: end;
 	}
+	& a {
+		text-decoration: none;
+		color: var(--c-white);
+		&:hover {
+			color: var(--c-grey);
+		}
+	}
 }
 
 .site__site-footer__nav__copyright {
 	grid-area: copyright;
 }
 
-.site__site-footer__nav__instagram {
-	grid-area: instagram;
+.site__site-footer__nav__ig-fb {
+	grid-area: ig-fb;
+	display: flex;
+	justify-content: space-around;
 }
 
-.site__site-footer__nav__facebook {
-	grid-area: facebook;
-}
-
-.site__site-footer__nav__contact {
-	grid-area: contact;
-}
-
-.site__site-footer__nav__privacy {
-	grid-area: privacy;
-}
-
-.site__site-footer__nav__terms {
-	grid-area: terms;
+.site__site-footer__nav__legal {
+	grid-area: legal;
+	display: flex;
+	justify-content: end;
+	gap: 1rem;
 }
 
 /* COMPONENT - books */
