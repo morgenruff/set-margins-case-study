@@ -5,13 +5,12 @@
 		<meta charset="utf-8">
 		<title>Set Margins' Publications ~ Web Component Library</title>
 		<link rel="stylesheet" href="https://use.typekit.net/hmz1ijq.css">
-		<link rel="stylesheet" href="https://use.typekit.net/hmz1ijq.css">
 		<link rel="stylesheet" href="normalize.css">
 		<link rel="stylesheet" href="main.css">
-		<script src="https://kit.fontawesome.com/7023abba24.js" crossorigin="anonymous"></script>
 	</head>
 	
 	<body>
+		
 		<header>
 			<h1>Set Margins' Publications ~ Web Component Library ~ <a href="https://setmargins.press" target="_blank">setmargins.press</a></h1>
 			<p>Morgen Ruff ~ MAGWD6610 Web Development ~ Fall 2023</p>
@@ -19,12 +18,13 @@
 		
 		<main>
 			
-<!-- typography defaults -->
+<!-- section: typography defaults -->
 			
-			<h2 class="section-header">1. typography defaults</h2>
-			
-			<article class="component__typography">
-				
+			<h2 class="section-header">1. typography defaults <span class="down-arrow--typography">&#8623;</span></h2>
+
+<!-- headings -->			
+
+			<article class="component__typography">	
 				<h3 class="component__typography__header">headings (h1, h2, h3 ... )</h3>
 				<div class="component__typography__screenshot">
 					<img src="#" srcset="img/1-homepage/main-header/main-header__logo.png 2x" alt="h1">
@@ -47,8 +47,9 @@
 				<p class="component__typography__h3">
 					Who can afford to be critical?
 				</p>
-				
 			</article>
+			
+<!-- body -->			
 			
 			<article class="component__typography">
 				<h3 class="component__typography__header">body text</h3>
@@ -60,14 +61,14 @@
 				</p>
 			</article>
 			
-<!-- headers & navigation bars -->
+<!-- section: headers & navigation bars -->
 			
-			<h2 class="section-header">2. headers/navs</h2>
+			<h2 class="section-header">2. headers, navigation, and footer <span class="down-arrow--navs">&#8623;</span></h2>
 			
 <!-- main header (appears on all pages) -->			
 			
 			<article class="component__navs">
-				<h3 class="component__navs__header">main header (appears on all pages)</h3>
+				<h3 class="component__navs__header">main header &mdash; appears on all pages</h3>
 				<div class="component__navs__screenshot">
 					<img src="#" srcset="img/1-homepage/main-header/main-header.png 2x" alt="main header">
 				</div>
@@ -77,35 +78,190 @@
 						<li class="site__main-header__item"><a href="#!">Books</a></li>
 						<li class="site__main-header__item"><a href="#!">Meetups</a></li>
 						<li class="site__main-header__item"><a href="#!">Engage</a></li>
-						<li class="site__main-header__item"><a href="#!">Cart (0)</a></li>
+						<li class="site__main-header__item"><a href="#!">Cart [0]</a></li>
 					</ul>
 				</div>
 			</article>
 			
-<!-- sub-header (appears on homepage in one form, and as a sub-navigation on books, meetups, engage pages - not on single book or cart pages) -->			
+<!-- sub-headers & filter bars  -->			
 			
 			<article class="component__navs">
-				<h3 class="component__navs__header">sub header (appears in one form on homepage and as a filter bar or secondary nav on books/meetups/engage, not on single book page or cart)</h3>
+				<h3 class="component__navs__header">sub-header (collapsed) &mdash; homepage</h3>
 				<div class="component__navs__screenshot">
-					<img src="#" srcset="img/1-homepage/sub-header/small/sub-header__carousel--blue.png 2x" alt="main header">
+					<img src="#" srcset="img/1-homepage/sub-header/small/sub-header__carousel--blue.png 2x" alt="sub-header collapsed">
 				</div>
 				
 				<div class="site__sub-header__homepage">
-					<ul class="site__sub-header__homepage__list">
-						<li class="site__sub-header__homepage__list__item site__sub-header__homepage__list__item--blue"><a href="#!">Meet-Up <span class="site__sub-header__divider"><i class="fa-sharp fa-solid fa-play"></i></span> Book launch, Talk <span class="site__sub-header__divider"><i class="fa-sharp fa-solid fa-play"></i></span> Book launch ‘Plugs, Pores, Walls and Lures’ <span class="site__sub-header__divider"><i class="fa-sharp fa-solid fa-play"></i></span> 26 - 26 Nov</a></li>
+					<nav class="site__sub-header__homepage__list">
+						<a href="#! "class="site__sub-header__homepage__list__item site__sub-header__homepage__list__item--blue"><div class="site__sub-header__homepage__list__item__left">Meet-Up &#9654; Book launch, Talk &#9654; Book launch ‘Plugs, Pores, Walls and Lures’ &#9654; 26 - 26 Nov</div><div class="site__sub-header__homepage__list__item__right">&#43;</div></a>
 						
-						<li class="site__sub-header__homepage__list__item site__sub-header__homepage__list__item--pink"><a href="#!">Meet-Up <span class="site__sub-header__divider"><i class="fa-sharp fa-solid fa-play"></i></span> Art Book Fair <span class="site__sub-header__divider"><i class="fa-sharp fa-solid fa-play"></i></span> Sprint Milano Art Book Fair 2023 <span class="site__sub-header__divider"><i class="fa-sharp fa-solid fa-play"></i></span> 24 - 26 Nov<a href="#!"></a></li>
+						<a href="#!" class="site__sub-header__homepage__list__item site__sub-header__homepage__list__item--purple"><div class="site__sub-header__homepage__list__item__left">Meet-Up &#9654; Art Book Fair &#9654; Sprint Milano Art Book Fair 2023 &#9654; 24 - 26 Nov</div><div class="site__sub-header__homepage__list__item__right">&#43;</div></a>
 						
-						<li class="site__sub-header__homepage__list__item site__sub-header__homepage__list__item--grey"><a href="#!">Meet-Up <span class="site__sub-header__divider"><i class="fa-sharp fa-solid fa-play"></i></span> Book launch <span class="site__sub-header__divider"><i class="fa-sharp fa-solid fa-play"></i></span> What is Post-Branding? | Melbourne Book Launch <span class="site__sub-header__divider"><i class="fa-sharp fa-solid fa-play"></i></span> 11 - 11 Nov</a></li>
+						<a href="#!" class="site__sub-header__homepage__list__item site__sub-header__homepage__list__item--grey"><div class="site__sub-header__homepage__list__item__left">Meet-Up &#9654; Book launch &#9654; What is Post-Branding? | Melbourne Book Launch &#9654; 11 - 11 Nov</div><div class="site__sub-header__homepage__list__item__right">&#43;</div></a>
 						
-						<li class="site__sub-header__homepage__list__item site__sub-header__homepage__list__item--green"><a href="#!">Meet-Up <span class="site__sub-header__divider"><i class="fa-sharp fa-solid fa-play"></i></span> Art Book Fair <span class="site__sub-header__divider"><i class="fa-sharp fa-solid fa-play"></i></span> Offprint – Paris Art Book Fair 2023 <span class="site__sub-header__divider"><i class="fa-sharp fa-solid fa-play"></i></span> 09 - 12 Nov<a href="#!"></a></li>
-					</ul>
+						<a href="#!" class="site__sub-header__homepage__list__item site__sub-header__homepage__list__item--green"><div class="site__sub-header__homepage__list__item__left">Meet-Up &#9654; Art Book Fair &#9654; Offprint – Paris Art Book Fair 2023 &#9654; 09 - 12 Nov</div><div class="site__sub-header__homepage__list__item__right">&#43;</div></a>
+					</nav>
 				</div>
 			</article>
 			
+<!-- homepage - sub-header - expanded -->	
+
+			<article class="component__navs">
+				<h3 class="component__navs__header">sub-header (expanded) &mdash; homepage</h3>
+				<div class="component__navs__screenshot">
+					<img src="#" srcset="img/1-homepage/sub-header/expanded/sub-header__carousel__expanded.png 2x" alt="sub-header expanded">
+				</div>
+				
+				<div class="site__sub-header__homepage__expanded">
+					<div class="site__sub-header__homepage__expanded__item site__sub-header__homepage__expanded__item__img"><img src="img/1-homepage/sub-header/expanded/sub-header__carousel__expanded__logo.png" alt="sprint logo"></div>
+					<div class="site__sub-header__homepage__expanded__item site__sub-header__homepage__expanded__item__top-date"><span>24 NOV | 5PM&ndash;9PM</span></div>
+					<div class="site__sub-header__homepage__expanded__item site__sub-header__homepage__expanded__item__second-date"><span>25&ndash;26 NOV | 11AM&ndash;9PM</span></div>
+					<div class="site__sub-header__homepage__expanded__item site__sub-header__homepage__expanded__item__who"><span>Represented by Freek Lomme</span></div>
+					<div class="site__sub-header__homepage__expanded__item site__sub-header__homepage__expanded__item__date-label"><span>Date</span></div>
+					<div class="site__sub-header__homepage__expanded__item site__sub-header__homepage__expanded__item__date-range"><span>24&ndash;26 Nov</span></div>
+					<div class="site__sub-header__homepage__expanded__item site__sub-header__homepage__expanded__item__location-label"><span>Location</span></div>
+					<div class="site__sub-header__homepage__expanded__item site__sub-header__homepage__expanded__item__location-one"><span>Via Maiocchi 5</span></div>
+					<div class="site__sub-header__homepage__expanded__item site__sub-header__homepage__expanded__item__location-and"><span>&amp;</span></div>
+					<div class="site__sub-header__homepage__expanded__item site__sub-header__homepage__expanded__item__location-two"><span>Via Pecchio 3</span></div>
+					<div class="site__sub-header__homepage__expanded__item site__sub-header__homepage__expanded__item__website-label"><span>Website</span></div>
+					<div class="site__sub-header__homepage__expanded__item site__sub-header__homepage__expanded__item__url"><a href="#!">www.sprintmilano.org</a></div>
+				</div>
+			</article>		
 			
+<!-- homepage - books filter bar - expandable -->
+
+			<article class="component__navs">
+				<h3 class="component__navs__header">filter bar (collapsed) &mdash; books page</h3>
+				<div class="component__navs__screenshot">
+					<img src="#" srcset=" 2x" alt="books filter bar collapsed">
+				</div>
+				
+				
+			</article>
 			
+			<article class="component__navs">
+				<h3 class="component__navs__header">filter bar (expanded) &mdash; books page</h3>
+				<div class="component__navs__screenshot">
+					<img src="#" srcset=" 2x" alt="books filter bar expanded">
+				</div>
+				
+				
+			</article>
 			
+<!-- meetups page - year/type filter bar - non-expandable -->
+
+			<article class="component__navs">
+				<h3 class="component__navs__header">filter bar (static) &mdash; meetup page</h3>
+				<div class="component__navs__screenshot">
+					<img src="#" srcset=" 2x" alt="meetup filter bar">
+				</div>
+				
+				
+			</article>
+
+<!-- engage page - section filter bar - non-expandable -->
+
+			<article class="component__navs">
+				<h3 class="component__navs__header">filter bar (static) &mdash; engage page</h3>
+				<div class="component__navs__screenshot">
+					<img src="#" srcset=" 2x" alt="engage filter bar">
+				</div>
+				
+				
+			</article>
+
+<!-- site footer - global -->
+
+			<article class="component__navs">
+				<h3 class="component__navs__header">site footer &mdash; all pages</h3>
+				<div class="component__navs__screenshot">
+					<img src="#" srcset="img/1-homepage/footer/footer.png 2x" alt="site footer">
+				</div>
+				
+				<div class="site__site-footer">
+					<p class="site__site-footer__logo">Set Margins'</p>
+					<p class="site__site-footer__mission">Critical and creative publishing to rethink and evolve visual communication and forms of cooperation</p>
+					<nav class="site__site-footer__nav">
+						<span class="site__site-footer__nav__copyright">Set Margins' &copy;2023</span>
+						<a class="site__site-footer__nav__instagram">Instagram</a>
+						<a class="site__site-footer__nav__facebook">Facebook</a>
+						<a class="site__site-footer__nav__contact">Contact</a>
+						<a class="site__site-footer__nav__privacy">Privacy policy</a>
+						<a class="site__site-footer__nav__terms">Terms and conditions</a>
+					</nav>
+				</div>
+			</article>
+
+<!-- section: books -->
+
+			<h2 class="section-header">3. books <span class="down-arrow--books">&#8623;</span></h2>
+
+<!-- book cube - single -->	
+
+			<article class="component__books">
+				<h3 class="component__books__header">single book cube &mdash; homepage & books page</h3>
+				<div class="component__books__screenshot">
+					<img src="#" srcset=" 2x" alt="single book cube">
+				</div>
+				
+				
+			</article>
+
+<!-- book cube - four-up grid -->
+
+			<article class="component__books">
+				<h3 class="component__books__header">four-up book cube grid &mdash; homepage & books page</h3>
+				<div class="component__books__screenshot">
+					<img src="#" srcset=" 2x" alt="book cubes - four up">
+				</div>
+				
+				
+			</article>
+
+<!-- book page body - single -->
+
+			<article class="component__books">
+				<h3 class="component__books__header">book page body &mdash; single</h3>
+				<div class="component__books__screenshot">
+					<img src="#" srcset=" 2x" alt="book cubes - four up">
+				</div>
+				
+				
+			</article>
+
+<!-- section: meetup -->
+
+			<h2 class="section-header">4. meetup <span class="down-arrow--meetup">&#8623;</span></h2>
+
+<!-- meetup listing - single -->
+
+			<article class="component__meetup">
+				<h3 class="component__meetup__header">meetup listing &mdash; single</h3>
+				<div class="component__meetup__screenshot">
+					<img src="#" srcset=" 2x" alt="book cubes - four up">
+				</div>
+				
+				
+			</article>
+		
+<!-- section: engage -->
+		
+			<h2 class="section-header">5. engage <span class="down-arrow--engage">&#8623;</span></h2>
+		
+<!-- engage - article -->
+		
+			<article class="component__engage">
+				<h3 class="component__engage__header">engage article &mdash; single</h3>
+				<div class="component__meetup__screenshot">
+					<img src="#" srcset=" 2x" alt="book cubes - four up">
+				</div>
+				
+				
+			</article>
+		
+<!--  -->
+		
+		
 		</main>
 	</body>
 	
