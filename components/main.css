@@ -155,8 +155,8 @@ header h1, p {
 
 .site__main-header {
 	background-color: var(--c-black);
-	margin: 1rem;
-	padding: 0.5rem 0.5rem 0 0.5rem;
+	margin: 1em;
+	padding: 0.5em 0.5em 0 0.5em;
 	max-width: 90%;
 }
 
@@ -165,7 +165,7 @@ header h1, p {
 	flex-direction: row;
 	justify-content: space-between;
 	margin: 0;
-	padding: 0 0.5rem;
+	padding: 0 0.5em;
 	list-style: none;
 }
 
@@ -200,11 +200,11 @@ header h1, p {
 	flex-direction: column;
 	list-style: none;
 	padding: 0;
-	margin: 1rem;
+	margin: 1em;
 }
 
 .site__sub-header__homepage__list__item {
-	margin-bottom: 0.2rem;
+	margin-bottom: 0.2em;
 }
 
 .site__sub-header__homepage__list__item:last-of-type {
@@ -221,7 +221,7 @@ header h1, p {
 	font-family: var(--f-area);
 	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
 	font-size: 0.9rem;
-	padding: 0.5rem;
+	padding: 0.5em;
 }
 
 .site__sub-header__homepage__list__item--blue {
@@ -241,19 +241,19 @@ header h1, p {
 }
 
 .site__sub-header__homepage__list__item__left {
-	padding-left: 0.5rem;
+	padding-left: 0.5em;
 }
 
 .site__sub-header__homepage__list__item__right {
 	font-size: 1.2rem;
 	font-weight: 100;
-	padding-right: 0.5rem;
+	padding-right: 0.5em;
 }
 
 /* PRODUCTION - homepage sub-header - expanded */
 
 .site__sub-header__homepage__expanded {
-	margin: 1rem;
+	margin: 1em;
 	width: 90%;
 	display: grid;
 	grid-template-columns: 3fr 0.6fr 2fr;
@@ -272,7 +272,7 @@ header h1, p {
 		"img website-label url"
 		"img blank9 blank10"
 		"img blank11 blank12";
-	gap: 0.3rem;
+	gap: 0.3em;
 	align-items: center;
 }
 
@@ -345,8 +345,8 @@ header h1, p {
 /* PRODUCTION - site footer */
 
 .site__site-footer {
-	margin: 1rem;
-	padding: 0.5rem;
+	margin: 1em;
+	padding: 0.5em;
 	background-color: var(--c-black);
 	width: 90%;
 }
@@ -357,8 +357,8 @@ header h1, p {
 	font-variation-settings: "wght" 500, "wdth" 40;
 	text-align: center;
 	font-size: 4rem;
-	margin-top: 7rem;
-	margin-bottom: 1.5rem;
+	margin-top: 2em;
+	margin-bottom: 0.4em;
 }
 
 .site__site-footer__mission {
@@ -373,18 +373,18 @@ header h1, p {
 }
 
 .site__site-footer__nav {
-	margin-top: 2.5rem;
+	margin-top: 2.5em;
 	display: grid;
 	grid-template-columns: 3fr 1fr 3fr;
-	grid-template-rows: 1.5rem;
+	grid-template-rows: 1.5em;
 	grid-template-areas: 
 		"copyright ig-fb legal";
-	gap: 0.5rem;
+	gap: 0.5em;
 	> * {
 		color: var(--c-white);
 		font-family: var(--f-area);
 		font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
-		font-size: 0.7rem;
+		font-size: 0.8rem;
 		align-self: end;
 	}
 	& a {
@@ -410,7 +410,7 @@ header h1, p {
 	grid-area: legal;
 	display: flex;
 	justify-content: end;
-	gap: 1rem;
+	gap: 1em;
 }
 
 /* COMPONENT - books */
