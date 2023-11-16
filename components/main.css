@@ -446,7 +446,13 @@ header h1, p {
 
 /* book cube - single */
 
+.site__book-cube--a {
+	text-decoration: none;
+	color: var(--c-black);
+}
+
 .site__book-cube {
+	position: relative;
 	margin: 1rem;
 	padding: 1em;
 	width: 20em;
@@ -462,17 +468,25 @@ header h1, p {
 .site__book-cube__header {
 	height: min-content;
 	display: flex;
-	align-content: flex-start;
+	align-content: center;
 	justify-content: space-between;
 	margin: 0;
+	font-size: 0.9rem;
 }
 
 .site__book-cube__header__catalog-number {
-	/* margin: 0.7em 0 0 0.7em; */
+	
+}
+
+.site__book-cube__header__new-tag {
+	color: var(--c-blue);
 }
 
 .site__book-cube__header__category--wrapper {
-	
+	/* visibility: hidden; */
+	list-style: none;
+	display: inline-block;
+	padding: 0;
 }
 
 .site__book-cube__header__category {
@@ -491,9 +505,8 @@ header h1, p {
 }
 
 .site__book-cube__header__drop-down-arrow {
-	transform: rotate(90deg);
 	height: min-content;
-	padding: 0.5em;
+	padding: 0;
 	&:hover {
 		background-color: gray;
 		border-radius: 100%;
@@ -511,6 +524,7 @@ header h1, p {
 .site__book-cube__footer {
 	display: flex;
 	justify-content: space-between;
+	gap: 1em;
 	align-items: flex-end;
 	height: min-content;
 	font-size: 0.9rem;
@@ -524,6 +538,7 @@ header h1, p {
 }
 
 .site__book-cube__footer__price-add-to-cart {
+	width: 50%;
 	text-align: right;
 	flex-wrap: nowrap;
 }
@@ -568,7 +583,31 @@ header h1, p {
 
 /* PRODUCTION - meetup */
 
+.site__listing--meetup__event--a {
+	text-decoration: none;
+	color: var(--c-black);
+}
 
+.site__listing--meetup__event {
+	font-family: var(--f-area);
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
+	margin: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: space-between;
+	border-bottom: 1px solid var(--c-black);
+}
+
+.site__listing--meetup__event__details {
+	padding: 1rem 1rem 0 1rem;
+	font-size: 0.8rem;
+}
+
+.site__listing--meetup__event__title {
+	padding: 1rem;
+	font-size: 3.3rem;
+}
 
 /* COMPONENT - engage */
 
