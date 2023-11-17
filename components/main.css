@@ -453,6 +453,7 @@ header h1, p {
 }
 
 .site__book-cube {
+	border: 1px solid red;
 	position: relative;
 	margin: 1rem;
 	padding: 1em;
@@ -466,7 +467,9 @@ header h1, p {
 }
 
 .site__book-cube__header {
-	height: min-content;
+	position: absolute;
+	top: 1rem;
+	width: 90%;
 	display: flex;
 	align-content: center;
 	justify-content: space-between;
@@ -498,47 +501,41 @@ header h1, p {
 	margin: 0 0.25em 0.25em 0.25em;
 	color: var(--c-black);
 	text-decoration: none;
-	& :hover {
+	&:hover {
 		color: var(--c-white);
 		background-color: var(--c-black);
 	}
 }
 
 .site__book-cube__header__drop-down-arrow {
-	height: min-content;
-	padding: 0;
-	& :hover {
-		background-color: gray;
+	width: min-content;
+	padding: 0.2em;
+	&:hover {
+		background-color: var(--c-grey);
 		border-radius: 100%;
 	}
 }
 
-.site__book-cube__cover {
-	
-}
-	
-.site__book-cube__cover__img {
-	max-width: 100%;
-}
-
 .site__book-cube__footer {
+	position: absolute;
+	bottom: 1rem;
+	width: 90%;
 	display: flex;
 	justify-content: space-between;
-	gap: 1em;
 	align-items: flex-end;
 	height: min-content;
 	font-size: 0.9rem;
 }
 
 .site__book-cube__footer__title-author {
-	width: max-content;
+	width: 60%;
 	text-overflow: ellipsis;
 	margin: 0;
 	flex-wrap: nowrap;
 }
 
 .site__book-cube__footer__price-add-to-cart {
-	width: 50%;
+	width: 40%;
 	text-align: right;
 	flex-wrap: nowrap;
 }
@@ -550,6 +547,22 @@ header h1, p {
 	width: 100%;
 	margin: 0;
 	text-overflow: ellipsis;
+	text-decoration: none;
+	color: var(--c-black);
+}
+
+.site__book-cube__footer__add-to-cart:hover {
+	color: var(--c-grey);
+}
+
+.site__book-cube__cover {
+	display: flex;
+	align-content: space-around;
+	height: inherit;
+}
+	
+.site__book-cube__cover__img {
+	max-width: 100%;
 }
 
 /* COMPONENT - meetup */
