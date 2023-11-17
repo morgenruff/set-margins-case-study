@@ -390,7 +390,7 @@ header h1, p {
 	& a {
 		text-decoration: none;
 		color: var(--c-white);
-		&:hover {
+		& :hover {
 			color: var(--c-grey);
 		}
 	}
@@ -498,7 +498,7 @@ header h1, p {
 	margin: 0 0.25em 0.25em 0.25em;
 	color: var(--c-black);
 	text-decoration: none;
-	&:hover {
+	& :hover {
 		color: var(--c-white);
 		background-color: var(--c-black);
 	}
@@ -507,7 +507,7 @@ header h1, p {
 .site__book-cube__header__drop-down-arrow {
 	height: min-content;
 	padding: 0;
-	&:hover {
+	& :hover {
 		background-color: gray;
 		border-radius: 100%;
 	}
@@ -586,7 +586,7 @@ header h1, p {
 .site__listing--meetup__event--a {
 	text-decoration: none;
 	color: var(--c-black);
-	&:hover {
+	& :hover {
 		background-color: var(--c-grey);
 	}
 }
@@ -603,12 +603,12 @@ header h1, p {
 }
 
 .site__listing--meetup__event__details {
-	padding: 1rem 1rem 0 1rem;
+	padding: 1rem;
 	font-size: 0.8rem;
 }
 
 .site__listing--meetup__event__title {
-	padding: 1rem;
+	padding: 0 1rem;
 	font-size: 3.3rem;
 }
 
@@ -668,13 +668,13 @@ header h1, p {
 
 .site__engage__article__text {
 	margin: 1rem 0;
-	line-height: 1.35rem;
+	line-height: 1.25rem;
 }
 
 .site__engage__article__list {
-	line-height: 1.35rem;
+	line-height: 1.25rem;
 	& > li {
-		font-size: 4rem;
+		font-size: 3rem;
 		& > span {
 			font-size: 1rem;
 		}
