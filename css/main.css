@@ -4,3 +4,7 @@
 
 /* globals */
 
+/* main header - fixed but auto-collapses on scroll down, leaving just the sub-header visible as the user moves down the page */
+
+/* book grid - responsive so that when the viewport reaches a certain width, the number of book grid items shrinks until it's just one on a mobile device, with four wide being the maximum */
+
