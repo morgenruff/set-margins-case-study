@@ -403,6 +403,7 @@ header h1, p {
 .site__site-footer__nav__ig-fb {
 	grid-area: ig-fb;
 	display: flex;
+	gap: 1em;
 	justify-content: space-around;
 }
 
@@ -462,7 +463,6 @@ header h1, p {
 	flex-direction: column;
 	align-content: space-between;
 	gap: 2em;
-	border: 1px solid var(--c-black);
 }
 
 .site__book-cube__header {
@@ -586,6 +586,9 @@ header h1, p {
 .site__listing--meetup__event--a {
 	text-decoration: none;
 	color: var(--c-black);
+	&:hover {
+		background-color: var(--c-grey);
+	}
 }
 
 .site__listing--meetup__event {
@@ -639,6 +642,44 @@ header h1, p {
 }
 
 /* PRODUCTION - engage */
+
+.site__engage--container {
+	display: flex;
+	border-bottom: 1px solid var(--c-black);
+	margin-bottom: 2rem;
+}
+
+.site__engage__empty {
+	visibility: hidden;
+	width: 50%;
+}
+
+.site__engage__article {
+	margin: 1rem;
+	width: 50%;
+	font-family: var(--f-area);
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400, "INKT" 0;
+}
+
+.site__engage__article__header {
+	font-size: 3rem;
+	margin: 0.5rem 0;
+}
+
+.site__engage__article__text {
+	margin: 1rem 0;
+	line-height: 1.35rem;
+}
+
+.site__engage__article__list {
+	line-height: 1.35rem;
+	& > li {
+		font-size: 4rem;
+		& > span {
+			font-size: 1rem;
+		}
+	}
+}
 
 
 
