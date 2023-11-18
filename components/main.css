@@ -254,7 +254,7 @@ header h1, p {
 /* PRODUCTION - homepage sub-header - expanded */
 
 .site__sub-header__homepage__expanded {
-	margin: 1em;
+	margin: 1rem;
 	width: 90%;
 	display: grid;
 	grid-template-columns: 100%;
@@ -366,6 +366,72 @@ header h1, p {
 	color: var(--c-black);
 	&:hover {
 		color: var(--c-grey-txt);
+	}
+}
+
+/* PRODUCTION - filter bar - meetup */
+
+.site__meetup__filter-bar {
+	margin: 1rem;
+	display: flex;
+	flex-direction: column;
+	width: 95%;
+	font-family: var(--f-area);
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
+	font-size: 0.8rem;
+}
+
+.site__meetup__filter-bar__year {
+	display: flex;
+	gap: 1em;
+	padding: 0.5em 0.5em 0.3em 0.5em;
+	border-top: 1px solid var(--c-black);
+	border-bottom: 1px solid var(--c-black);
+}
+
+.site__meetup__filter-bar__year__item {
+	text-decoration: none;
+	color: var(--c-black);
+	&:hover {
+		color: var(--c-grey);
+	}
+}
+
+.site__meetup__filter-bar__category {
+	display: flex;
+	gap: 1em;
+	padding: 0.5em 0.5em 0.3em 0.5em;
+	border-bottom: 1px solid var(--c-black);
+}
+
+.site__meetup__filter-bar__category__item {
+	text-decoration: none;
+	color: var(--c-black);
+	&:hover {
+		color: var(--c-grey);
+	}
+}
+
+/* PRODUCTION - sub-header/filter bar - engage */
+
+.site__engage__filter-bar {
+	width: 95%;
+	display: flex;
+	gap: 1em;
+	margin: 1rem;
+	padding: 0.5em 0.5em 0.3em 0.5em;
+	font-family: var(--f-area);
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
+	font-size: 0.8rem;
+	border-top: 1px solid var(--c-black);
+	border-bottom: 1px solid var(--c-black);
+}
+
+.site__engage__filter-bar__link {
+	text-decoration: none;
+	color: var(--c-black);
+	&:hover {
+		color: var(--c-grey);
 	}
 }
 
