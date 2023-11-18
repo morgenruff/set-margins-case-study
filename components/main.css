@@ -191,6 +191,10 @@ header h1, p {
 
 /* PRODUCTION - homepage sub-header (collapsed) */
 
+.site__sub-header__homepage {
+	width: 95%;
+}
+
 .site__sub-header__homepage__list {
 	display: flex;
 	flex-direction: column;
@@ -473,6 +477,17 @@ header h1, p {
 .site__book-cube--a {
 	text-decoration: none;
 	color: var(--c-black);
+	&:hover {
+		& ~ .site__book-cube__cover {
+			/* figure out how to zoom the book cover and keep it centered */
+		}
+		& ~ .site__book-cube__header-footer__header {
+			visibility: hidden;
+		}
+		& ~ .site__book-cube__category--wrapper {
+			visibility: visible;
+		}
+	}
 }
 
 .site__book-cube {
@@ -480,16 +495,20 @@ header h1, p {
 	position: relative;
 	margin: 1rem;
 	padding: 1em;
-	width: 20em;
+	width: 19em;
 	font-family: var(--f-area);
 	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
+}
+
+.site__book-cube__header-footer {
+	z-index: 1;
 	display: flex;
 	flex-direction: column;
 	align-content: space-between;
 	gap: 2em;
 }
 
-.site__book-cube__header {
+.site__book-cube__header-footer__header {
 	position: absolute;
 	top: 1rem;
 	width: 90%;
@@ -498,24 +517,25 @@ header h1, p {
 	justify-content: space-between;
 	margin: 0;
 	font-size: 0.9rem;
+	visibility: visible;
 }
 
-.site__book-cube__header__catalog-number {
+.site__book-cube__header-footer__header__catalog-number {
 	
 }
 
-.site__book-cube__header__new-tag {
+.site__book-cube__header-footer__header__new-tag {
 	color: var(--c-blue);
 }
 
-.site__book-cube__header__category--wrapper {
+.site__book-cube__category--wrapper {
 	/* visibility: hidden; */
 	list-style: none;
 	display: inline-block;
 	padding: 0;
 }
 
-.site__book-cube__header__category {
+.site__book-cube__category {
 	margin: 0;
 	display: inline-block;
 	border: 1px solid var(--c-black);
@@ -530,7 +550,7 @@ header h1, p {
 	}
 }
 
-.site__book-cube__header__drop-down-arrow {
+.site__book-cube__drop-down-arrow {
 	width: min-content;
 	padding: 0.2em;
 	&:hover {
@@ -539,9 +559,10 @@ header h1, p {
 	}
 }
 
-.site__book-cube__footer {
+.site__book-cube__header-footer__footer {
 	position: absolute;
 	bottom: 1rem;
+	left: 1rem;
 	width: 90%;
 	display: flex;
 	justify-content: space-between;
@@ -550,23 +571,22 @@ header h1, p {
 	font-size: 0.9rem;
 }
 
-.site__book-cube__footer__title-author {
+.site__book-cube__header-footer__footer__title-author {
 	width: 60%;
-	text-overflow: ellipsis;
 	margin: 0;
-	flex-wrap: nowrap;
+	wrap: nowrap;
 }
 
-.site__book-cube__footer__price-add-to-cart {
+.site__book-cube__header-footer__footer__price-add-to-cart {
 	width: 40%;
 	text-align: right;
-	flex-wrap: nowrap;
+	wrap: nowrap;
 }
 
-.site__book-cube__footer__title,
-.site__book-cube__footer__price,
-.site__book-cube__footer__author,
-.site__book-cube__footer__add-to-cart {
+.site__book-cube__header-footer__footer__title,
+.site__book-cube__header-footer__footer__price,
+.site__book-cube__header-footer__footer__author,
+.site__book-cube__header-footer__footer__add-to-cart {
 	width: 100%;
 	margin: 0;
 	text-overflow: ellipsis;
@@ -574,7 +594,7 @@ header h1, p {
 	color: var(--c-black);
 }
 
-.site__book-cube__footer__add-to-cart:hover {
+.site__book-cube__header-footer__footer__add-to-cart:hover {
 	color: var(--c-grey);
 }
 
