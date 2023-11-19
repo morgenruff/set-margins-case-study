@@ -140,7 +140,9 @@
 					<img src="#" srcset="img/2-books-grid/filter/filter-bar__unclicked.png 2x" alt="books filter bar collapsed">
 				</div>
 				
-				
+				<nav class="site__books__filter-bar__collapsed">
+					<a href="#!" class="site__books__filter-bar__collapsed__item"><img src="../img/filter.png" alt="filter icon">Filter</a>
+				</nav>
 			</article>
 			
 			<article class="component__navs">
@@ -149,7 +151,25 @@
 					<img src="#" srcset="img/2-books-grid/filter/filter-bar__expanded.png 2x" alt="books filter bar expanded">
 				</div>
 				
-				
+				<div class="site__books__filter-bar__expanded">
+					<div class="site__books__filter-bar__expanded__sort">
+						<p class="site__books__filter-bar__expanded__header">Sort by</p>
+						<div class="site__books__filter-bar__expanded__list">
+							<input type="radio" name="price-high" id="price-high">
+							<label for="price-high">Price: High to Low</label>
+							<input type="radio" name="price-low" id="price-low">
+							<label for="price-low">Price: Low to High</label>
+							<input type="radio" name="title-a" id="title-a">
+							<label for="title-a">Title: A to Z</label>
+							<input type="radio" name="title-z" id="title-z">
+							<label for="title-z">Title: Z to A</label>
+						</div>
+					</div>
+					
+					<div class="site__books__filter-bar__expanded__filters">
+						
+					</div>
+				</div>
 			</article>
 			
 <!-- meetups page - year/type filter bar - non-expandable -->

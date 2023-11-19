@@ -369,6 +369,59 @@ header h1, p {
 	}
 }
 
+/* PRODUCTION - filter bar - books - collapsed */
+
+.site__books__filter-bar__collapsed {
+	display: flex;
+	margin: 1rem;
+	padding: 0.5em 0.5em 0.3em 0.5em;
+	width: 95%;
+	font-family: var(--f-area);
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
+	font-size: 0.8rem;
+	border-bottom: 1px solid var(--c-black);
+}
+
+.site__books__filter-bar__collapsed__item {
+	width: 33%;
+	text-align: right;
+	margin-left: auto;
+	border-left: 1px solid var(--c-black);
+	color: var(--c-black);
+	text-decoration: none;
+	& > img {
+		inline-size: 12px;
+		margin-right: 3px;
+	}
+}
+
+/* PRODUCTION - filter bar - books - expanded */
+
+.site__books__filter-bar__expanded {
+	margin: 1rem;
+	width: 50%;
+	font-family: var(--f-area);
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
+}
+
+.site__books__filter-bar__expanded__sort {
+	
+}
+
+.site__books__filter-bar__expanded__header {
+	font-size: 2rem;
+	padding: 0.3rem;
+}
+
+.site__books__filter-bar__expanded__list {
+	display: flex;
+	flex-direction: column;
+	& > * {
+		border-bottom: 1px solid var(--c-black);
+		padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+	}
+}
+
 /* PRODUCTION - filter bar - meetup */
 
 .site__meetup__filter-bar {
