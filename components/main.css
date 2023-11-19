@@ -646,7 +646,7 @@ header h1, p {
 
 /* PRODUCTION - books */
 
-/* book cube - single */
+/* PRODUCTION - book cube - single */
 
 .site__book-cube--a {
 	text-decoration: none;
@@ -781,6 +781,72 @@ header h1, p {
 .site__book-cube__cover__img {
 	max-width: 100%;
 }
+
+/* PRODUCTION - book page - body - single */
+
+.site__book-page__main-details {
+	display: flex;
+	gap: 3em;
+	margin: 1rem;
+	width: 80%;
+	font-family: var(--f-area);
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
+}
+
+.site__book-page__main-details__catalog-no {
+	font-size: 2rem;
+}
+
+.site__book-page__main-details__content__title-author {
+	
+}
+
+.site__book-page__main-details__content__title-author__title {
+	font-size: 2rem;
+	margin: 0 0 0.2em 0;
+}
+
+.site__book-page__main-details__content__title-author__subtitle {
+	font-size: 2rem;
+	font-style: italic;
+	margin-bottom: 1em;
+}
+
+.site__book-page__main-details__content__title-author__author {
+	font-size: 1.3rem;
+	margin-bottom: 2em;
+}
+
+.site__book-page__main-details__content__price-cart {
+	display: flex;
+	width: 90%;
+	border: 1px solid var(--c-black);
+}
+
+.site__book-page__main-details__content__price-cart__price,
+.site__book-page__main-details__content__price-cart__cart {
+	width: 50%;
+	padding: 0.5em 2em 0.3em 2em;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.site__book-page__main-details__content__price-cart__price {
+	border-right: 1px solid var(--c-black);
+}
+
+.site__book-page__main-details__content__price-cart__cart {
+	text-decoration: none;
+	color: var(--c-black);
+	&:hover {
+		background-color: var(--c-black);
+		color: var(--c-white);
+	}
+}
+
+/* PRODUCTION - book page - specs & credits - collapsed */
+
+.site__
 
 /* COMPONENT - meetup */
 
