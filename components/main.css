@@ -846,7 +846,30 @@ header h1, p {
 
 /* PRODUCTION - book page - specs & credits - collapsed */
 
-.site__
+.site__book-page__specs-credits__collapsed {
+	width: 70%;
+	margin: 1rem;
+	font-family: var(--f-area);
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
+	font-size: 1.2rem;
+}
+
+.site__book-page__specs-credits__collapsed__item {
+	display: flex;
+	flex-direction: row;
+	align-content: space-between;
+	align-items: baseline;
+	text-decoration: none;
+	color: var(--c-black);
+	padding: 0.5em 0 0.3em 0;
+	border-top: 1px solid var(--c-black);
+	&:hover {
+		color: var(--c-grey);
+	}
+	&:last-of-type {
+		border-bottom: 1px solid var(--c-black);
+	}
+}
 
 /* COMPONENT - meetup */
 
@@ -864,10 +887,10 @@ header h1, p {
 	font-family: var(--f-area);
 	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400, "INKT" 0;
 	padding: 1rem;
-	margin: 0;
+	margin: 1rem;
 	background-color: var(--c-red);
 	color: var(--c-black);
-	border-bottom: 2px solid var(--c-black);
+	border: 2px solid var(--c-black);
 }
 
 .component__meetup__screenshot img {
