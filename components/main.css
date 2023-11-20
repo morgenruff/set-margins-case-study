@@ -857,15 +857,14 @@ header h1, p {
 .site__book-page__specs-credits__collapsed__item {
 	display: flex;
 	flex-direction: row;
-	align-content: space-between;
-	align-items: baseline;
+	justify-content: space-between;
 	text-decoration: none;
 	color: var(--c-black);
 	padding: 0.5em 0 0.3em 0;
 	border-top: 1px solid var(--c-black);
-	&:hover {
-		color: var(--c-grey);
-	}
+	&:hover > .plus {
+		transform: rotate(45deg);
+		}
 	&:last-of-type {
 		border-bottom: 1px solid var(--c-black);
 	}
@@ -887,10 +886,10 @@ header h1, p {
 	font-family: var(--f-area);
 	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400, "INKT" 0;
 	padding: 1rem;
-	margin: 1rem;
+	margin: 0;
 	background-color: var(--c-red);
 	color: var(--c-black);
-	border: 2px solid var(--c-black);
+	border-bottom: 2px solid var(--c-black);
 }
 
 .component__meetup__screenshot img {
