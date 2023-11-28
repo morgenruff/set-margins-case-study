@@ -28,6 +28,10 @@
 
 /* globals */
 
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0 auto;
 	font-size: medium;
@@ -44,15 +48,32 @@ h1 {
 
 /* main nav - fixed but auto-collapses on scroll down, leaving just the sub-header visible as the user moves down the page */
 
-.main-nav {
+header {
 	background-color: var(--c-black);
 	margin: 0 auto;
 	padding: 0.5em 0.5em 0 0.5em;
+	width: 100dvw;
+	position: fixed;
+}
+
+.wordmark {
+	font-size: 3rem;
+	font-family: var(--f-adapt);
+	font-variation-settings: "wght" 300, "wdth" 40;
+	margin: 0;
+}
+
+.wordmark a {
+	color: var(--c-white);
+	text-decoration: none;
+}
+
+.main-nav {
+	
 }
 
 .main-nav__list {
 	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
 	margin: 0;
 	padding: 0 0.5em;
@@ -65,10 +86,6 @@ h1 {
 	font-variation-settings: "wght" 300, "wdth" 40;
 	font-size: 3rem;
 	color: var(--c-grey-txt);
-}
-
-.main-nav__item__wordmark a {
-	color: var(--c-white);
 }
 
 .main-nav__list a:hover {
@@ -179,17 +196,6 @@ h1 {
 	color: var(--c-white);
 }
 
-@media screen and (max-width: 600px) {
-	.site-footer__nav {
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(3, minmax(0, 1fr));
-		grid-template-areas: 
-			"copyright"
-			"ig-fb"
-			"legal";
-	}
-}
-
 .site-footer__nav__copyright {
 	grid-area: copyright;
 }
@@ -224,4 +230,24 @@ h1 {
 	display: flex;
 	justify-content: end;
 	gap: 1em;
+}
+
+/* media query for 600px and narrower viewports - hamburger top nav, stacking bottom nav items */
+
+@media screen and (max-width: 600px) {
+	.site-footer__mission {
+		width: 80%;
+	}
+	.site-footer__nav {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(3, minmax(0, 1fr));
+		grid-template-areas: 
+			"copyright"
+			"ig-fb"
+			"legal";
+		gap: 0.5em;	
+	}
+	.site-footer__nav > * {
+		margin: 0 auto;
+	}
 }
