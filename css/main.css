@@ -1,10 +1,227 @@
-/* typography */
+/* typography & color */
 
+/* @font-face {
+	font-family: "adapt-variable";
+	font-variation-settings: "wght" 600, "wdth" 40;
+}	
+	
+@font-face {
+	font-family: "area-variable";
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
+} */
 
+:root {
+	--f-adapt: "adapt-variable", sans-serif;
+	--f-area: "area-variable", sans-serif;
+	--c-black: #050505;
+	--c-white: #ffffff;
+	--c-grey-txt: #999999;
+	--c-grey: #cccccc;
+	--c-green: #6cffc1;
+	--c-blue: #0029ff;
+	--c-blue-light: #52b6ff;
+	--c-red: #fd4539;
+	--c-purple: #c241ff;
+	--c-purple-light: #f0b2ff;
+	--c-salmon: #ffb26a;
+}
 
 /* globals */
 
-/* main header - fixed but auto-collapses on scroll down, leaving just the sub-header visible as the user moves down the page */
+body {
+	margin: 0 auto;
+	font-size: medium;
+}
 
-/* book grid - responsive so that when the viewport reaches a certain width, the number of book grid items shrinks until it's just one on a mobile device, with four wide being the maximum */
+.page-wrapper {
+	display: flex;
+	flex-direction: column;
+}
 
+h1 {
+	margin: 0;
+}
+
+/* main nav - fixed but auto-collapses on scroll down, leaving just the sub-header visible as the user moves down the page */
+
+.main-nav {
+	background-color: var(--c-black);
+	margin: 0 auto;
+	padding: 0.5em 0.5em 0 0.5em;
+}
+
+.main-nav__list {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0 0.5em;
+	list-style: none;
+}
+
+.main-nav__list a {
+	text-decoration: none;
+	font-family: var(--f-adapt);
+	font-variation-settings: "wght" 300, "wdth" 40;
+	font-size: 3rem;
+	color: var(--c-grey-txt);
+}
+
+.main-nav__item__wordmark a {
+	color: var(--c-white);
+}
+
+.main-nav__list a:hover {
+	color: var(--c-white);
+}
+
+/* homepage sub-header - events information - uses carousel by Flickity, I think - single entry here for simplicity's sake */
+
+
+
+/* homepage book grid - responsive so that when the viewport reaches a certain width, the number of book grid items shrinks until it's just one on a mobile device, with five wide being the maximum */
+
+
+
+/* homepage email newsletter sign-up section */
+
+.newsletter__homepage {
+	display: flex;
+	font-family: var(--f-area);
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
+}
+
+.newsletter__homepage__section {
+	width: 50%;
+	padding: 1em;
+	border-right: 1px solid var(--c-black);
+}
+
+.newsletter__homepage__section:last-of-type {
+	border: none;
+}
+
+.newsletter__homepage__section__header {
+	margin: 0.5em 0 0.3em 0;
+	font-size: 2.5rem;
+}
+
+.newsletter__homepage__section__intro {
+	font-size: 0.8rem;
+}
+
+.newsletter__homepage__section__input {
+	display: flex;
+	width: max-content;
+	margin: 2em 0 0 0;
+	font-size: 0.8rem;
+}
+
+.newsletter__homepage__section__input input {
+	background-color: var(--c-grey);
+	padding: .75em .75em .65em .75em;
+	flex-grow: 2;
+	border: none;
+}
+
+.newsletter__homepage__section__input input:focus {
+	outline: none;
+}
+
+.newsletter__homepage__section__input a {
+	color: var(--c-black);
+	background-color: var(--c-grey);
+	text-decoration: none;
+	padding: .75em .75em .65em .75em;
+	flex-grow: 2;
+	border: none;
+}
+
+/* main site footer */
+
+.site-footer {
+	padding: 0.5em;
+	background-color: var(--c-black);
+}
+
+.site-footer__logo {
+	color: var(--c-white);
+	font-family: var(--f-adapt);
+	font-variation-settings: "wght" 300, "wdth" 40;
+	text-align: center;
+	font-size: 4rem;
+	margin-top: 2em;
+	margin-bottom: 0.4em;
+}
+
+.site-footer__mission {
+	color: var(--c-white);
+	font-family: var(--f-area);
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
+	font-size: 0.8rem;
+	margin: 0 auto;
+	margin-bottom: 2.5em;
+	text-align: center;
+	width: 40%;
+	line-height: 1.15rem;
+}
+
+.site-footer__nav {
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-areas: 
+		"copyright ig-fb legal";
+	gap: 2em;
+	font-family: var(--f-area);
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
+	font-size: 0.8rem;
+	color: var(--c-white);
+}
+
+@media screen and (max-width: 600px) {
+	.site-footer__nav {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(3, minmax(0, 1fr));
+		grid-template-areas: 
+			"copyright"
+			"ig-fb"
+			"legal";
+	}
+}
+
+.site-footer__nav__copyright {
+	grid-area: copyright;
+}
+
+.site-footer__nav__link {
+	text-decoration: none;
+	color: var(--c-white);
+	align-self: center;
+}
+
+.site-footer__nav__link:hover {
+	color: var(--c-grey);
+}
+
+.site-footer__nav__ig-fb {
+	grid-area: ig-fb;
+	display: flex;
+	justify-content: center;
+	gap: 1em;
+}
+
+.site-footer__nav__link__ig {
+	justify-self: end;
+}
+
+.site-footer__nav__link__fb {
+	justify-self: start;
+}
+
+.site-footer__nav__legal {
+	grid-area: legal;
+	display: flex;
+	justify-content: end;
+	gap: 1em;
+}
