@@ -53,7 +53,7 @@ header {
 	margin: 0 auto;
 	padding: 0.5em 0.5em 0 0.5em;
 	width: 100dvw;
-	position: fixed;
+	/* position: fixed; */
 }
 
 .wordmark {
@@ -94,7 +94,120 @@ header {
 
 /* homepage sub-header - events information - uses carousel by Flickity, I think - single entry here for simplicity's sake */
 
+.sub-header__homepage__expanded {
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(2, max-content);
+	grid-template-areas: 
+		'filter-bar'
+		'content';
+}
 
+.sub-header__homepage__filter-bar {
+	grid-area: filter-bar;
+}
+
+.sub-header__homepage__filter-bar:hover > .sub-header__homepage__expanded__pop-out {
+	visibility: visible;
+	transition-timing-function: ease;
+}
+
+.sub-header__homepage__filter-bar:hover > .sub-header__list__item__right {
+	transform: rotate(45deg);
+}
+
+.sub-header__homepage__expanded__pop-out {
+	grid-area: content;
+	display: grid;
+	grid-template-columns: 3fr 0.6fr 2fr;
+	grid-template-rows: repeat(13, 0.8rem);
+	grid-template-areas: 
+		"img top-date top-date"
+		"img second-date second-date"
+		"img blank1 blank2"
+		"img blank3 blank4"
+		"img who who"
+		"img blank5 blank6"
+		"img date-label date-range"
+		"img location-label location-one"
+		"img blank7 location-and"
+		"img blank8 location-two"
+		"img website-label url"
+		"img blank9 blank10"
+		"img blank11 blank12";
+	gap: 0.3em;
+	align-items: center;
+	padding: 1rem;
+	border-bottom: 1px solid var(--c-black);
+	visibility: hidden;
+}
+
+.sub-header__homepage__expanded__pop-out__item {
+	width: max-content;
+	font-family: var(--f-area);
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
+	font-size: 0.8rem;
+	align-self: center;
+}
+
+.sub-header__homepage__expanded__pop-out__item__img {
+	grid-area: img;
+	& img {
+		max-height: 95%;
+	}
+}
+
+.sub-header__homepage__expanded__pop-out__item__top-date {
+	grid-area: top-date;
+}
+
+.sub-header__homepage__expanded__pop-out__item__second-date {
+	grid-area: second-date;
+}
+
+.sub-header__homepage__expanded__pop-out__item__who {
+	grid-area: who;
+}
+
+.sub-header__homepage__expanded__pop-out__item__date-label {
+	grid-area: date-label;
+}
+
+.sub-header__homepage__expanded__pop-out__item__date-range {
+	grid-area: date-range;
+}
+
+.sub-header__homepage__expanded__pop-out__item__location-label {
+	grid-area: location-label;
+}
+
+.sub-header__homepage__expanded__pop-out__item__location-one {
+	grid-area: location-one;
+}
+
+.sub-header__homepage__expanded__pop-out__item__location-and {
+	grid-area: location-and;
+}
+
+.sub-header__homepage__expanded__pop-out__item__location-two {
+	grid-area: location-two;
+}
+
+.sub-header__homepage__expanded__pop-out__item__website-label {
+	grid-area: website-label;
+}
+
+.sub-header__homepage__expanded__pop-out__item__url {
+	grid-area: url;
+}
+
+.sub-header__homepage__expanded__pop-out__item__url a {
+	color: var(--c-black);
+	&:hover {
+		color: var(--c-grey-txt);
+	}
+}
 
 /* homepage book grid - responsive so that when the viewport reaches a certain width, the number of book grid items shrinks until it's just one on a mobile device, with five wide being the maximum */
 
@@ -114,12 +227,8 @@ header {
 	border-right: 1px solid var(--c-black);
 }
 
-.newsletter__homepage__section:last-of-type {
-	border: none;
-}
-
 .newsletter__homepage__section__header {
-	margin: 0.5em 0 0.3em 0;
+	margin: 0.3em 0;
 	font-size: 2.5rem;
 }
 
@@ -228,7 +337,7 @@ header {
 .site-footer__nav__legal {
 	grid-area: legal;
 	display: flex;
-	justify-content: end;
+	justify-content: flex-end;
 	gap: 1em;
 }
 
