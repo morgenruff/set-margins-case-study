@@ -656,7 +656,7 @@ header h1, p {
 			/* figure out how to zoom the book cover and keep it centered */
 		}
 		& ~ .site__book-cube__header-footer__header {
-			visibility: hidden;
+			display: none;
 		}
 		& ~ .site__book-cube__category--wrapper {
 			visibility: visible;
@@ -665,7 +665,7 @@ header h1, p {
 }
 
 .site__book-cube {
-	border: 1px solid red;
+	border: 1px solid var(--c-black);
 	position: relative;
 	margin: 1rem;
 	padding: 1em;
@@ -684,7 +684,7 @@ header h1, p {
 
 .site__book-cube__header-footer__header {
 	position: absolute;
-	top: 1rem;
+	top: 1.5em;
 	width: 90%;
 	display: flex;
 	align-content: center;

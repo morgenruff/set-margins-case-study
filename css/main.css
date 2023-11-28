@@ -28,10 +28,6 @@
 
 /* globals */
 
-*, *::before, *::after {
-	box-sizing: border-box;
-}
-
 body {
 	margin: 0 auto;
 	font-size: 100%;
@@ -44,6 +40,7 @@ body {
 
 h1 {
 	margin: 0;
+	display: none;
 }
 
 /* main nav - fixed but auto-collapses on scroll down, leaving just the sub-header visible as the user moves down the page */
@@ -91,29 +88,35 @@ header {
 
 .sub-header__homepage__expanded {
 	margin: 0 auto;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat(2, max-content);
-	grid-template-areas: 
-		'filter-bar'
-		'content';
+	display: flex;
+	flex-direction: column;
 }
 
 .sub-header__homepage__filter-bar {
-	grid-area: filter-bar;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+	text-decoration: none;
+	color: var(--c-black);
+	background-color: var(--c-purple-light);
+	font-family: var(--f-area);
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
+	font-size: 0.9rem;
+	padding: 0.8em 0.8em 0.5em 0.8em;
+	border-bottom: 1px solid var(--c-black);
 }
 
-.sub-header__homepage__filter-bar:hover > .sub-header__homepage__expanded__pop-out {
-	visibility: visible;
+.sub-header__homepage__filter-bar:hover + .sub-header__homepage__expanded__pop-out {
+	display: grid;
 	transition-timing-function: ease;
 }
 
-.sub-header__homepage__filter-bar:hover > .sub-header__list__item__right {
+.sub-header__homepage__filter-bar:hover + .sub-header__list__item__right {
 	transform: rotate(45deg);
 }
 
 .sub-header__homepage__expanded__pop-out {
-	grid-area: content;
 	display: grid;
 	grid-template-columns: 3fr 0.6fr 2fr;
 	grid-template-rows: repeat(13, 0.8rem);
@@ -135,7 +138,7 @@ header {
 	align-items: center;
 	padding: 1rem;
 	border-bottom: 1px solid var(--c-black);
-	visibility: hidden;
+	display: none;
 }
 
 .sub-header__homepage__expanded__pop-out__item {
@@ -148,9 +151,6 @@ header {
 
 .sub-header__homepage__expanded__pop-out__item__img {
 	grid-area: img;
-	& img {
-		max-height: 95%;
-	}
 }
 
 .sub-header__homepage__expanded__pop-out__item__top-date {
@@ -199,9 +199,6 @@ header {
 
 .sub-header__homepage__expanded__pop-out__item__url a {
 	color: var(--c-black);
-	&:hover {
-		color: var(--c-grey-txt);
-	}
 }
 
 /* homepage book grid - responsive so that when the viewport reaches a certain width, the number of book grid items shrinks until it's just one on a mobile device, with five wide being the maximum */
@@ -349,9 +346,9 @@ header {
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(3, minmax(0, 1fr));
 		grid-template-areas: 
-			"copyright"
+			"legal"
 			"ig-fb"
-			"legal";
+			"copyright";
 		gap: 0.5em;	
 	}
 	.site-footer__nav > * {
