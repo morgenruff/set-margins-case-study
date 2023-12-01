@@ -223,17 +223,20 @@ header {
 	font-family: var(--f-area);
 	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
 	font-size: 0.9rem;
-	min-width: min-content;
 	border-bottom: 1px solid var(--c-black);
 	border-right: 1px solid var(--c-black);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 3em;
 }
 
-.book-cube__header-footer {
+/* .book-cube__header-footer {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	gap: 2em;
-}
+} */
 
 .book-cube__header-footer__header {
 	display: flex;
@@ -245,8 +248,13 @@ header {
 	color: var(--c-blue);
 }
 
+.book-cube__cover {
+	margin: 2em 0;
+	text-align: center;
+}
+
 .book-cube__cover__img {
-	width: 100%;
+	height: 200px;
 }
 
 .book-cube__header-footer__footer {
@@ -255,14 +263,15 @@ header {
 }
 
 .book-cube__header-footer__footer__title-author {
-	width: 60%;
+	width: 65%;
 	margin: 0;
+	padding: 0.25em 0;
 }
 
-.site__book-cube__header-footer__footer__price-add-to-cart {
-	width: 40%;
+.book-cube__header-footer__footer__price-add-to-cart {
+	width: max-content;
 	margin: 0;
-	
+	padding: 0.25em 0;
 }
 
 .book-cube__header-footer__header__catalog-number,
@@ -271,13 +280,19 @@ header {
 }
 
 .book-cube__header-footer__footer__title,
-.book-cube__header-footer__footer__price,
 .book-cube__header-footer__footer__author,
+.book-cube__header-footer__footer__price,
 .book-cube__header-footer__footer__add-to-cart {
 	margin: 0;
+	padding: .1em 0;
+	white-space: nowrap;
+	overflow: hidden;
 	text-overflow: ellipsis;
-	text-decoration: none;
-	color: var(--c-black);
+}
+
+.book-cube__header-footer__footer__price,
+.book-cube__header-footer__footer__add-to-cart {
+	text-align: right;
 }
 
 .book-cube__header-footer__footer__add-to-cart:hover {
