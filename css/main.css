@@ -205,8 +205,8 @@ header {
 
 .books-wrapper {
 	display: grid;
-	gap: 1px;
-	background-color: var(--c-black);
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-rows: auto;
 }
 
 /* book cube - single */
@@ -215,6 +215,7 @@ header {
 	text-decoration: none;
 	color: var(--c-black);
 	background-color: var(--c-white);
+	display: block;
 }
 
 .book-cube {
@@ -223,6 +224,7 @@ header {
 	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
 	font-size: 0.9rem;
 	min-width: min-content;
+	border-right: 1px solid var(--c-black);
 }
 
 .book-cube__header-footer {
@@ -259,6 +261,7 @@ header {
 .site__book-cube__header-footer__footer__price-add-to-cart {
 	width: 40%;
 	margin: 0;
+	
 }
 
 .book-cube__header-footer__header__catalog-number,
@@ -283,9 +286,11 @@ header {
 /* homepage email newsletter sign-up section */
 
 .newsletter__homepage {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
 	font-family: var(--f-area);
 	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
+	border-top: 1px solid var(--c-black);
 }
 
 .newsletter__homepage__section {
@@ -408,7 +413,7 @@ header {
 	gap: 1em;
 }
 
-/* media queries - hamburger top nav, stacking bottom nav items, book grid flow */
+/* media queries - hamburger top nav, stacking bottom nav items */
 
 @media screen and (max-width: 900px) {
 	.site-footer__logo {
@@ -428,41 +433,5 @@ header {
 	}
 	.site-footer__nav > * {
 		margin: 0 auto;
-	}
-}
-
-@media screen and (max-width: 320px) {
-	.books-wrapper {
-		grid-template-columns: repeat(1, minmax(0, 1fr));
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.books-wrapper {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-}
-
-@media screen and (max-width: 900px) {
-	.books-wrapper {
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-	}
-}
-
-@media screen and (max-width: 1200px) {
-	.books-wrapper {
-		grid-template-columns: repeat(4, minmax(0, 1fr));
-	}
-}
-
-@media screen and (max-width: 1500px) {
-	.books-wrapper {
-		grid-template-columns: repeat(5, minmax(0, 1fr));
-	}
-}
-
-@media screen and (max-width: 1800px) {
-	.books-wrapper {
-		grid-template-columns: repeat(6, minmax(0, 1fr));
 	}
 }
