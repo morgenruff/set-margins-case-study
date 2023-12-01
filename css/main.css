@@ -51,6 +51,8 @@ header {
 	padding: 0.5em 0.5em 0 0.5em;
 	width: 100%;
 	position: sticky;
+	top: 0;
+	z-index: 1;
 }
 
 .main-nav__list {
@@ -254,7 +256,8 @@ header {
 }
 
 .book-cube__cover__img {
-	height: 200px;
+	height: 15em;
+	box-shadow: 3px 3px 3px var(--c-grey);
 }
 
 .book-cube__header-footer__footer {
@@ -332,7 +335,7 @@ header {
 
 .newsletter__homepage__section__input input {
 	background-color: var(--c-grey);
-	padding: .75em .75em .65em .75em;
+	padding: .75em;
 	flex-grow: 2;
 	border: none;
 }
@@ -431,6 +434,9 @@ header {
 /* media queries - hamburger top nav, stacking bottom nav items */
 
 @media screen and (max-width: 900px) {
+	.newsletter__homepage__section {
+		width: 100%;
+	}
 	.site-footer__logo {
 		margin-top: 1em;
 	}
