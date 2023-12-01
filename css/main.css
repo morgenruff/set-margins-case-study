@@ -265,13 +265,13 @@ header {
 .book-cube__header-footer__footer__title-author {
 	width: 65%;
 	margin: 0;
-	padding: 0.25em 0;
+	padding-top: 0.25em;
 }
 
 .book-cube__header-footer__footer__price-add-to-cart {
 	width: max-content;
 	margin: 0;
-	padding: 0.25em 0;
+	padding-top: 0.25em;
 }
 
 .book-cube__header-footer__header__catalog-number,
