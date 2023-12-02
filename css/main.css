@@ -469,6 +469,34 @@ header {
 		font-size: 3rem;
 		width: 100%;
 	}
+	.sub-header__homepage__filter-bar:hover + .sub-header__homepage__expanded__pop-out {
+		display: grid;
+	}
+	.sub-header__homepage__expanded__pop-out {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(13, 0.8rem) 1fr;
+		grid-template-areas: 
+			"top-date top-date"
+			"second-date second-date"
+			"blank1 blank2"
+			"blank3 blank4"
+			"who who"
+			"blank5 blank6"
+			"date-label date-range"
+			"location-label location-one"
+			"blank7 location-and"
+			"blank8 location-two"
+			"website-label url"
+			"blank9 blank10"
+			"blank11 blank12"
+			"img img";
+		gap: 0.3em;
+		align-items: center;
+		padding: 1rem;
+		border-bottom: 1px solid var(--c-black);
+		display: none;
+	}
 	.newsletter__homepage__section {
 		width: 100%;
 	}
