@@ -86,6 +86,10 @@ header {
 	color: var(--c-white);
 }
 
+.mobile-nav {
+	display: none;
+}
+
 /* homepage sub-header - events information - uses carousel by Flickity, I think - single entry here for simplicity's sake */
 
 .sub-header__homepage__expanded {
@@ -105,6 +109,7 @@ header {
 	font-family: var(--f-area);
 	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 0;
 	font-size: 0.9rem;
+	line-height: 1.25em;
 	padding: 0.8em 0.8em 0.5em 0.8em;
 	border-bottom: 1px solid var(--c-black);
 }
@@ -202,7 +207,7 @@ header {
 	color: var(--c-black);
 }
 
-/* homepage book grid - responsive so that when the viewport reaches a certain width, the number of book grid items shrinks until it's just one on a mobile device, with five wide being the maximum */
+/* homepage book grid - responsive so that when the viewport reaches a certain width, the number of book grid items shrinks until it's just one on a mobile device */
 
 .books-wrapper {
 	display: grid;
@@ -232,13 +237,6 @@ header {
 	justify-content: space-between;
 	gap: 3em;
 }
-
-/* .book-cube__header-footer {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	gap: 2em;
-} */
 
 .book-cube__header-footer__header {
 	display: flex;
@@ -433,7 +431,45 @@ header {
 
 /* media queries - hamburger top nav, stacking bottom nav items */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
+	.main-nav {
+		display: none;
+	}
+	.mobile-nav	{
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr min-content;
+		align-items: center;
+	}
+	.mobile-nav__wordmark {
+		display: block;
+		font-family: var(--f-adapt);
+		font-variation-settings: "wght" 200, "wdth" 40;
+		font-size: 3rem;
+	}
+	.mobile-nav__wordmark a {
+		color: var(--c-white);
+		text-decoration: none;
+	}
+	.mobile-nav__menu:hover + .mobile-nav__list {
+		display: block;
+	}
+	.mobile-nav__list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		display: none;
+	}
+	.mobile-nav__item a {
+		text-decoration: none;
+		color: var(--c-white);
+		font-family: var(--f-adapt);
+		font-variation-settings: "wght" 300, "wdth" 40;
+		font-size: 3rem;
+		width: 100%;
+	}
+	
 	.newsletter__homepage__section {
 		width: 100%;
 	}
